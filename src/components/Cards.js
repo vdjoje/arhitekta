@@ -1,28 +1,28 @@
-import React from 'react';
-import {Card, Icon} from 'semantic-ui-react';
-
+import React from "react";
+import { Card, Icon } from "semantic-ui-react";
 
 const extra = (
   <a>
-    <Icon name='user' />
+    <Icon name="user" />
     20 Attending
-    <Icon style={{marginLeft:"50%"}} name='star' onClick={this.handleItemClick}/>
+    <Icon
+      style={{ marginLeft: "50%" }}
+      name="star"
+      onClick={this.handleItemClick}
+    />
   </a>
 );
 
-
-const Cards = () => (
+const Cards = props => (
   <Card
-    color='purple'
-    style={{marginBot: "5%"}}
-    image='https://unsplash.it/200/300/?random'
-    header='Ime Događaja'
-    meta='Carl Cox, Vuk Smiljanic'
-    description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
+    color="purple"
+    style={{ marginBot: "5%" }}
+    image="https://unsplash.it/200/300/?random"
+    header={props.name}
+    meta={props.artist}
+    description={props.description}
     extra={extra}
   />
+);
 
-)
-
-
-export default Cards
+export default Cards;
