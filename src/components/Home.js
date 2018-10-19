@@ -1,67 +1,24 @@
-import React, { Component } from "react";
-import Cards from "./Cards";
+import React from 'react'
+import { Image } from 'semantic-ui-react'
 
-const styles = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center"
-};
+const Home = () => (
+  
 
-class Home extends Component {
-  constructor() {
-    super();
-    this.state = {
-      events: [
-        {
-          name: "Ime dogadjaja",
-          artists: "Cox i Vuk",
-          description: "Bice nam do jaja."
-        },
-        {
-          name: "Ime dogadj2aja",
-          artists: "Cox i Vu2k",
-          description: "Bice nddgdam do jaja."
-        },
-        {
-          name: "Ime dogadj3aja",
-          artists: "Cox i Vu2k",
-          description: "Bice aadsam do jaja."
-        },
-        {
-          name: "Ime dogadj3aja",
-          artists: "Cox i Vu2k",
-          description: "Bice aadsam do jaja."
-        }
-      ]
-    };
-  }
+   
+    <container>
+    <div
+      style={{color: "black" }}
+    > 
 
-  render() {
-    const ivent = this.state.events;
-    // const eventList = ivent.map((a, index) => {
-    //     return <li key={index}>{a.name}</li>;
-    // });
-    const eventList = ivent.map((a, index) => {
-      return (
-        <Cards
-          key={index}
-          artist={a.artists}
-          description={a.description}
-          name={a.name}
-        />
-      );
-    });
-    return (
-      <div style={styles}>
-        <br />
-        <br />
-        {eventList}
-        {/* <Cards artist={"Kurton"} description="opis" name="Ime ludo" />
-        <Cards />
-        <Cards /> */}
-      </div>
-    );
-  }
-}
+      <Image src="https://unsplash.it/1920/1080/?random"   />  
+    </div>
 
-export default Home;
+    <div>
+      <h1>Dobro dosli</h1>
+      <h3>Arhitektura… Dizajn… Kreacija… Umjetnost… Enterijer…</h3>
+      <h5>“An interior is the Natural projection of the soul” </h5>
+      <h5>(Coco Chanel)</h5>  
+    </div>
+    </container>
+)
+export default Home

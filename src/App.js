@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Main from './components/Main';
-import Eventmenu from './components/Eventmenu';
 import Topbar from './components/Topbar'
 
 class App extends Component {
@@ -11,7 +10,7 @@ class App extends Component {
       <div className="main">
           <Topbar />
           <Main />
-          <Eventmenu />
+          
       </div>
     );
   }
