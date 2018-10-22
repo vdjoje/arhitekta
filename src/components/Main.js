@@ -4,8 +4,15 @@ import Home from './Home';
 import Login from './Login';
 import Omeni  from './Omeni';
 import Odideje  from './Usluge';
-import Oaza from './Oaza';
 import Kontakt from './Kontakt';
+import Oaza from './Oaza';
+import Ambasada from './Ambasada';
+import Atlas from './Atlas';
+import Benexfitnes from './Benexfitnes';
+import Bogdanov from './Bogdanov';
+import Vila from './Vila';
+import Planinski from './Planinski';
+import StambeniCetinje from './StambeniCetinje';
 
 
 class Main extends Component {
@@ -16,8 +23,15 @@ class Main extends Component {
         <Route path="/login" component={Login} />
         <Route path="/omeni" component={Omeni} />
         <Route path="/odideje" component={Odideje} />
-        <Route path="/oaza" component={Oaza} />
         <Route path="/kontakt" component={Kontakt} />
+        <Route path="/oaza" component={Oaza} />
+        <Route path="/ambasada" component={Ambasada} />
+        <Route path="/atlas" component={Atlas} />
+        <Route path="/benexfitnes" component={Benexfitnes} />
+        <Route path="/bogdanov" component={Bogdanov} />
+        <Route path="/vila" component={Vila} />
+        <Route path="/planinski" component={Planinski} />
+        <Route path="/stambenicetinje" component={StambeniCetinje} />
       </Switch>
     );
   }

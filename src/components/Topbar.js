@@ -122,12 +122,71 @@ export default class Topbar extends Component {
 
         </Menu.Item>
 
-        <Dropdown 
+        {/* <Dropdown  
           item text='Portfolio' options={options} simple item
           style={{ color: "white", textDecoration: "none" }}
         >
         </Dropdown>
+        */}
 
+        <Dropdown 
+            style={{color:"white"}}
+            text='Portfolio' simple item 
+            as={Link}
+            to="/portfolio"
+            
+            >
+          <Dropdown.Menu>
+            <Dropdown.Item text='Poslovno-apartmanski objekat “Oaza”' 
+                as={Link}
+                to="/oaza"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Ambasada UAE u Capital Plaza Centru (Podgorica)' 
+                as={Link}
+                to="/ambasada"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Atlas banka u Capital Plaza Centru (Podgorica)' 
+                as={Link}
+                to="/atlas"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Stambeno-poslovni objekat “Bogdanov kraj” (Cetinje)' 
+                as={Link}
+                to="/bogdanov"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='“Benex fitnes centar” u Capital Plaza Centru (Podgorica)' 
+                as={Link}
+                to="/benexfitnes"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Stambeni objekat Cetinje' 
+                as={Link}
+                to="/stambenicetinje"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Enterijer vile na primorju' 
+                as={Link}
+                to="/vila"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+            <Dropdown.Item text='Enterijer planinskog stana' 
+                as={Link}
+                to="/planinski"
+                style={{ color: "white", textDecoration: "none" }}
+                onClick={this.handleItemClick}
+            />
+          </Dropdown.Menu>
+        </Dropdown>
        
 
 
