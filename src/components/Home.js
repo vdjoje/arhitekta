@@ -7,13 +7,15 @@ const Home = () => (
    
     <container>
     <div
-      style={{color: "black" }}
+      style={{color: "black", position:"fixed" }}
     > 
 
       <Image src="https://unsplash.it/1920/1080/?random"   />  
     </div>
 
-    <div>
+    <div
+      style={{position: 'absolute'}}
+    >
       <h1>Dobro dosli</h1>
       <h3>Arhitektura… Dizajn… Kreacija… Umjetnost… Enterijer…</h3>
       <h5>“An interior is the Natural projection of the soul” </h5>

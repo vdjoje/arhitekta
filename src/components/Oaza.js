@@ -12,7 +12,6 @@ import slika9 from '../images/Oaza/9A.jpg';
 import slika10 from '../images/Oaza/10A.jpg';
 import slika11 from '../images/Oaza/11A.jpg';
 import slika12 from '../images/Oaza/12A.jpg';
-import ModalImage from 'react-modal-image';
 
 
 
@@ -59,11 +58,7 @@ const Oaza = () => (
         <Image src={slika12} size='medium' style={style}/> 
       </div>
       
-        <ModalImage 
-            small={slika1}  
-            large={slika1}
-            alt="Hellow"
-        />    
+         
 
 
   </div>
