@@ -91,16 +91,16 @@ export default class Topbar extends Component {
         <div 
           style={{ display: "flex", justifyContent: "flex-end" }}
         >
-        {/*  
+          
         <Menu.Item
           as={Link}
-          to="/"
+          to="/modal"
           style={{ color: "white", textDecoration: "none" }}
           onClick={this.handleItemClick}
         >
           Dobrodosli
 
-        </Menu.Item> */}
+        </Menu.Item> 
 
         <Menu.Item
           as={Link}

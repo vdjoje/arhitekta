@@ -58,8 +58,7 @@ const Oaza = () => (
         <Image src={slika12} size='medium' style={style}/> 
       </div>
       
-         
-
+        
 
   </div>
 )
