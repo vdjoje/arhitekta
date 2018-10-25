@@ -92,7 +92,7 @@ export default class Topbar extends Component {
           style={{ display: "flex", justifyContent: "flex-end" }}
         >
           
-        <Menu.Item
+        {/* <Menu.Item
           as={Link}
           to="/modal"
           style={{ color: "white", textDecoration: "none" }}
@@ -100,7 +100,7 @@ export default class Topbar extends Component {
         >
           Dobrodosli
 
-        </Menu.Item> 
+        </Menu.Item>  */}
 
         <Menu.Item
           as={Link}

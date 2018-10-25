@@ -1,5 +1,6 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
+import back from '../../src/images/back.jpg'
 
 const Home = () => (
   
@@ -8,7 +9,8 @@ const Home = () => (
         style={{color: "black", position:"fixed" }}
       > 
 
-        <Image src="https://unsplash.it/1920/1080/?random"   />  
+        <Image src={back} />  
+
       </div>
 
       <div
