@@ -13,7 +13,6 @@ import Bogdanov from './Bogdanov';
 import Vila from './Vila';
 import Planinski from './Planinski';
 import StambeniCetinje from './StambeniCetinje';
-import Slidertest from './Slidetest';
 
 class Main extends Component {
   render() {
@@ -32,7 +31,6 @@ class Main extends Component {
         <Route path="/vila" component={Vila} />
         <Route path="/planinski" component={Planinski} />
         <Route path="/stambenicetinje" component={StambeniCetinje} />
-        <Route path="/slidertest" component={Slidertest} />
       </Switch>
     );
   }

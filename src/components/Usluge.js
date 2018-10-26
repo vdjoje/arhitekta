@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Form, Icon, Message, Divider } from 'semantic-ui-react'
-import Slidertest from './Slidetest';
+
 
 const Usluge = () => (
   
@@ -9,7 +9,7 @@ const Usluge = () => (
   >
       <h1>Od Ideje do realizacije</h1>
       
-      <Slidertest />  
+      
 
   </div>
 )
