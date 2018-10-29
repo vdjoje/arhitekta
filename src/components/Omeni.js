@@ -1,15 +1,24 @@
 import React from 'react'
 import { Image } from 'semantic-ui-react'
+import s1 from '../images/ja.jpg';
+
 
 const Omeni = () => (
   
   <div
-      style={{color: "black", marginTop: "20%", direction:"flex", flexFlow: "row wrap", justifyContent: "center"}}
+      style={{
+        color: "black", 
+        marginTop: "20%", 
+        margin: 'auto',
+        width: '50%'
+      }}
   >
       <h1>O Meni</h1>
       
-      <p style={{ fontSize:"15px", maxWidth: '60vw' }} 
-      ><Image style={{ float:"left", marginRight:"2%", marginLeft: "2%" }} src="https://unsplash.it/150/200/?random" />
+      <Image style={{margin: 'auto', width:'15%', marginBottom: '5%', marginTop: '5%' }} src={s1}  circular />
+
+      <p style={{ fontSize:"15px", maxWidth: '60vw', textAlign: 'center' }} 
+      >
         Rodjena sam 1986. godine. Diplomirala sam na Arhitektonskom fakultetu u Podgorici.
         Od 2010-te godine se aktivno bavim tom profesijom. Prvobitno iskustvo sam stekla kao 
         dizajner enterijera u fabrici Mi- Rai. Potom se, 2012-te godine, priključujem birou 

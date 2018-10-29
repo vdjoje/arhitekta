@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Card, Icon, Image } from 'semantic-ui-react'
+import Gallery from 'react-photo-gallery';
+import Lightbox from 'react-images';
 import sl1 from '../images/Atlas/s1.jpg';
 import sl2 from '../images/Atlas/s2.jpg';
 import sl3 from '../images/Atlas/s3.jpg';
@@ -12,40 +14,70 @@ import sl9 from '../images/Atlas/s9.jpg';
 import sl10 from '../images/Atlas/s10.jpg';
 import sl11 from '../images/Atlas/s11.jpg';
 
+const photos = [
+    { src: sl1, width: 6, height: 4 },
+    { src: sl2, width: 6, height: 4 },
+    { src: sl3, width: 6, height: 4 },
+    { src: sl4, width: 6, height: 4 },
+    { src: sl5, width: 6, height: 4 },
+    { src: sl6, width: 6, height: 4 },
+    { src: sl7, width: 6, height: 4 },
+    { src: sl8, width: 6, height: 4 },
+    { src: sl9, width: 6, height: 4 },
+    { src: sl10, width: 6, height: 4 },
+    { src: sl11, width: 6, height: 4 },
+];
 
 
-const Atlas = () => (
-  
-  <div
-        style={{
-            color: "black", 
-            marginTop: "10%",
-            width: '930px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            backgroundColor: 'black'
-
+export default class Atlas extends Component {
+    constructor() {
+      super();
+      this.state = { currentImage: 0 };
+      this.closeLightbox = this.closeLightbox.bind(this);
+      this.openLightbox = this.openLightbox.bind(this);
+      this.gotoNext = this.gotoNext.bind(this);
+      this.gotoPrevious = this.gotoPrevious.bind(this);
+    }
+    openLightbox(event, obj) {
+      this.setState({
+        currentImage: obj.index,
+        lightboxIsOpen: true,
+      });
+    }
+    closeLightbox() {
+      this.setState({
+        currentImage: 0,
+        lightboxIsOpen: false,
+      });
+    }
+    gotoPrevious() {
+      this.setState({
+        currentImage: this.state.currentImage - 1,
+      });
+    }
+    gotoNext() {
+      this.setState({
+        currentImage: this.state.currentImage + 1,
+      });
+    }
+    render() {
+      return (
+        <div
+            style={{
+                marginTop:'5%'    
             }}
-  >
-      <h1 style={{color:'white' }} >Atlas banka u Capital Plaza Centru (Podgorica)</h1>
-      
-      <div>
-            <Image src={sl1} floated='left' width={605} height={405} />
-            <Image src={sl2}  width={300} height={200}/>
-            <Image src={sl3}  width={300} height={200}/>
-            <Image src={sl4} floated='left' width={375} height={226}/>
-            <Image src={sl5} floated='left' width={375} height={226}/>
-            <Image src={sl6}  width={150} height={226}  />
-            <Image src={sl7}  floated='right' width={605} height={405} />
-            <Image src={sl8}  width={300} height={200}/>
-            <Image src={sl9}  width={300} height={200}/>
-            <Image src={sl10} floated='left' width={450} height={301}/>
-            <Image src={sl11} width={452} height={301} />    
-          
-          
-      </div>  
-
-
-  </div>
-)
-export default Atlas
+        >  
+          <Gallery photos={photos} onClick={this.openLightbox} />
+          <Lightbox images={photos}
+            onClose={this.closeLightbox}
+            onClickPrev={this.gotoPrevious}
+            onClickNext={this.gotoNext}
+            currentImage={this.state.currentImage}
+            isOpen={this.state.lightboxIsOpen}
+            
+          />
+        </div>
+      )
+    }
+  }
+  
